@@ -56,6 +56,7 @@ int main(void)
 					printf("2- List products exist in store n but not store m\n");
 					printf("3- List products exist in both store n and store m\n");
 					printf("4- List sorted product by stock\n");
+					printf("5- Main main menu\n");
 					scanf("%d", &dec);
 					switch (dec)
 					{
@@ -98,11 +99,14 @@ int main(void)
 						printf("1- Continue\n2- Return main menu\n");
 						scanf("%d", &con);
 						break;
+					case 5:
+						cont = 0;
+						break;
 					default:
 						break;
 					}
 
-				} while (con == 1);
+				} while (con == 1 && dec != 5);
 				break;
 
 			case 3:
@@ -127,8 +131,7 @@ int main(void)
 			
 			}
 			
-		}
-		while (cont == 1);
+		}while (cont == 1);
 	} while (decision != 4);
 
 	return 0;
